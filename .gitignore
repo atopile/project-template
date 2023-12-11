@@ -35,3 +35,5 @@ build/
 # Virtual environment
 .venv/
 venv/
+
+.ato/
