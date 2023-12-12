@@ -15,7 +15,7 @@ _autosave-*
 *.tmp
 *-save.pro
 *-save.kicad_pcb
-fp-lib-table
+*.kicad_pcb.lck
 fp-info-cache
 
 # Netlist files (exported from Eeschema)
@@ -36,4 +36,5 @@ build/
 .venv/
 venv/
 
+# .ato directory
 .ato/
