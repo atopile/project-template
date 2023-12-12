@@ -215,7 +215,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "../../build/default/template123.net",
+      "netlist": "../../../build/default/template123.net",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
