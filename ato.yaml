@@ -2,3 +2,5 @@ ato-version: ^0.0.22
 builds:
   default:
     entry: elec/src/template123.ato:template123
+dependencies:
+- generics
