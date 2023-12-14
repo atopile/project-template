@@ -1,4 +1,4 @@
-ato-version: ^0.0.22
+ato-version: ^0.1.2
 builds:
   default:
     entry: elec/src/template123.ato:template123
