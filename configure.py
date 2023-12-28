@@ -6,29 +6,19 @@ import click
 from jinja2 import Environment, FileSystemLoader
 
 
-MAGIC_WORD = "please"
-
-
 @click.command()
 @click.argument("name")
-@click.argument("magic_word")
-@click.option("--debug", is_flag=True, default=False, help="Enable debug mode.")
-def main(name: str, magic_word: str, debug: bool):
+@click.option("--debug/--no-debug", is_flag=True, default=True, help="Enable debug mode.")
+def main(name: str, debug: bool):
     """
     This is a script to configure the project.
 
     It's intended to be called by the `ato create` command.
-    If you're calling it manually, there's likely something
-    wrong and you should probably stop.
 
     This script is intended to be run in the same environment
     as the ato CLI, so it's expecting to have access to the
     same packages and tools; Jinja, etc...
     """
-    if magic_word != MAGIC_WORD:
-        raise click.BadArgumentUsage(
-            "This script is intended to be called by the ato CLI."
-        )
 
     # Common variables
     extended_globals = {
@@ -59,6 +49,10 @@ def main(name: str, magic_word: str, debug: bool):
         # Remove the template
         if not debug:
             template_path.unlink()
+
+    # Remove this script
+    if not debug:
+        Path("configure.py").unlink()
 
 
 if __name__ == "__main__":
