@@ -24,7 +24,7 @@ def main(name: str, debug: bool):
     extended_globals = {
         "name": name,
         "caseconverter": caseconverter,
-        "cwd": Path.cwd(),
+        "repo_root": Path(__file__).parent,
     }
 
     # Load templates
