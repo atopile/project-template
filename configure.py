@@ -21,10 +21,11 @@ def main(name: str, debug: bool):
     """
 
     # Common variables
+    repo_root = Path(__file__).parent
     extended_globals = {
         "name": name,
         "caseconverter": caseconverter,
-        "repo_root": Path(__file__).parent,
+        "repo_root": repo_root,
     }
 
     # Load templates
@@ -52,7 +53,7 @@ def main(name: str, debug: bool):
 
     # Remove this script
     if not debug:
-        Path("configure.py").unlink()
+        (repo_root / "configure.py").unlink()
 
 
 if __name__ == "__main__":
