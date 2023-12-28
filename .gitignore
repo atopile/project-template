@@ -38,3 +38,6 @@ venv/
 
 # .ato directory
 .ato/
+
+# IDEs
+.vscode/

@@ -53,7 +53,7 @@ def main(name: str, debug: bool):
 
     # Remove this script
     if not debug:
-        (repo_root / "configure.py").unlink()
+        Path(__file__).unlink()
 
 
 if __name__ == "__main__":
