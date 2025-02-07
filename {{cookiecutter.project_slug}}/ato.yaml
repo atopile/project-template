@@ -1,8 +1,10 @@
-ato-version: 0.3.0
+ato-version: {{cookiecutter.__ato_version}}
+
 paths:
   src: ./
   layout: ./layouts
   footprints: ./footprints
+
 builds:
   default:
-    entry: {{caseconverter.kebabcase(name)}}.ato:App
+    entry: main.ato:App
