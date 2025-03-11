@@ -1,0 +1,10 @@
+ato-version: {{cookiecutter.__ato_version}}
+
+paths:
+  src: ./
+  layout: ./layouts
+  footprints: ./footprints
+
+builds:
+  default:
+    entry: main.ato:App
