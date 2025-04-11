@@ -6,11 +6,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Build
-        uses: docker://ghcr.io/atopile/atopile-kicad
+      - uses: atopile/setup-atopile@main
+
+      - run: ato sync
+      - run: ato build
         id: build
         continue-on-error: true
 
