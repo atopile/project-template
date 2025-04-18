@@ -2,4 +2,4 @@
 
 {{cookiecutter.description}}
 
-Created by {{cookiecutter.author_name}} <{{cookiecutter.email}}>
+Created by {{cookiecutter.author_name}} <{{cookiecutter.author_email}}>
